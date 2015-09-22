@@ -4,52 +4,43 @@ package printing;
  * Created by leives01 on 21/09/15.
  */
 public class Printer extends Machine{
-//    private boolean isOn;
     private String modelNumber;
     private String onStatus;
 
 
     public Printer(boolean isOn, String modelNumber){
-//        this.isOn = isOn;
         super(isOn);
         this.modelNumber = modelNumber;
     }
 
     public void print(int copies){
 
-//        for (int i = 0; i < copies; i++){
-//            System.out.println(modelNumber + " copy " + i);
+        for (int i = 0 ; i < copies ; i++){
+            System.out.println(modelNumber + " copy " + i);
+        }
+
+        if(isOn) {
+            onStatus = "is on!";
+        } else {
+            onStatus = "is not on";
+        }
+
+        System.out.println(modelNumber + " " + onStatus);
+
+//        switch(copies){
+//            case 0:
+//                System.out.println(modelNumber + " isn't printing any copies.");
+//                break;
+//            case 1:
+//                System.out.println(modelNumber + " is printing " + copies + " copies.");
+//                break;
+//            case 2:
+//                System.out.println(modelNumber + " is printing " + copies + " copies.");
+//                break;
+//            default:
+//                System.out.println(modelNumber + " is printing several copies");
 //        }
 
-//        while(copies > 0){
-//            System.out.println("printing!!!");
-//        } /* infinite loop!!!!!!!!! */
-
-        if(isOn)
-            onStatus = "Sis on!";
-        else
-            onStatus = "is not on";
-
-        switch(copies){
-            case 0:
-                System.out.println(modelNumber + " isn't printing any copies.");
-                break;
-            case 1:
-                System.out.println(modelNumber + " is printing " + copies + " copies.");
-                break;
-            case 2:
-                System.out.println(modelNumber + " is printing " + copies + " copies.");
-                break;
-            default:
-                System.out.println(modelNumber + " is printing several copies");
-        }
-
-        if(isOn){
-            System.out.println(modelNumber + " is on!");
-        }
-        else {
-            System.out.println(modelNumber + " is off!");
-        }
     }
 
     public void printColors(){
@@ -66,6 +57,7 @@ public class Printer extends Machine{
             System.out.println(currentColor);
         }
     }
+
 
     public void print(String text){
         System.out.println(text);
