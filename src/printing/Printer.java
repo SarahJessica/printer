@@ -15,8 +15,10 @@ public class Printer extends Machine{
 
     public void print(int copies){
 
-        for (int i = 0 ; i < copies ; i++){
-            System.out.println(modelNumber + " copy " + i);
+//        for (int i = 0 ; i < copies ; i++){
+        while(copies > 0){
+            System.out.println(modelNumber + " " + copies + " remaining.");
+            copies --;
         }
 
         if(isOn) {
