@@ -3,14 +3,21 @@ package printing;
 /**
  * Created by leives01 on 21/09/15.
  */
-public class Printer extends Machine{
+//public class Printer extends Machine{
+public class Printer implements IMachine{
     private String modelNumber;
-    private String onStatus;
+    private PaperTray paperTray = new PaperTray();
 
 
     public Printer(boolean isOn, String modelNumber){
-        super(isOn);
+//        super(isOn);
         this.modelNumber = modelNumber;
+    }
+
+    @Override
+    public void TurnOn(){
+        super.TurnOn();
+        System.out.println("the printer is on!");
     }
 
     public void print(int copies){
@@ -21,13 +28,13 @@ public class Printer extends Machine{
             copies --;
         }
 
-        if(isOn) {
-            onStatus = "is on!";
-        } else {
-            onStatus = "is not on";
-        }
+//        if(isOn) {
+//            onStatus = "is on!";
+//        } else {
+//            onStatus = "is not on";
+//        }
 
-        System.out.println(modelNumber + " " + onStatus);
+//        System.out.println(modelNumber + " " + onStatus);
 
 //        switch(copies){
 //            case 0:

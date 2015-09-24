@@ -1,6 +1,7 @@
 package greetings;
 
 import printing.Printer;
+import printing.Machine;
 
 public class HelloWorld
 {
@@ -20,15 +21,20 @@ public class HelloWorld
 ////            myPrinter.print("Hello Printer!");
 //            String theModelNumber = myPrinter.getModelNumber();
 
-            Printer myPrinter = new Printer(true, "MY PRINTER");
-            myPrinter.print(4);
-            myPrinter.TurnOff();
+//            Printer myPrinter = new Printer(true, "MY PRINTER");
+//            myPrinter.print(4);
+//            myPrinter.TurnOff();
+//            myPrinter.print(2);
+//
+//            Printer yourPrinter = new Printer(false, "YOUR PRINTER");
+//            yourPrinter.print(0);
+//
+//            Printer otherPrinter = new Printer(false, "OTHER PRINTER");
+//            otherPrinter.printColors();
 
-            Printer yourPrinter = new Printer(false, "YOUR PRINTER");
-            yourPrinter.print(0);
-
-            Printer otherPrinter = new Printer(false, "OTHER PRINTER");
-            otherPrinter.printColors();
+            Machine inheritedPrinter = new Printer(true, "MY INHERTIED PRINTER");
+//            Machine machine = new Machine(false);
+            inheritedPrinter.TurnOn();
 
 		}
 
